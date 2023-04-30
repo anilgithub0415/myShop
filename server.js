@@ -11,7 +11,7 @@ const path = require('path');
     res.sendFile('dist/my-Shop/index.html', { root: '.' });
 }); */
 app.get('/*', function(req,res) {
-   res.sendFile(path.join(__dirname, 'dist', 'my-Shop/index.html'));
+   res.sendFile(path.join(__dirname, 'dist2', 'my-Shop/index.html'));
  });
 
 // Start the server
