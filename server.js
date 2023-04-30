@@ -17,7 +17,7 @@ app.use(express.static('dist/my-Shop', {
     res.sendFile('dist/my-Shop/index.html', { root: '.' });
 }); */
 app.get('/*', function(req,res) {
-   res.sendFile(path.join(__dirname+'/my-Shop/index.html'));
+   res.sendFile(path.join(__dirname+'dist/my-Shop/index.html'));
  });
 
 // Start the server
