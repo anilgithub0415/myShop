@@ -36,4 +36,5 @@ app.use(express.static(__dirname + '/myShop'));
 app.get('/*', function(req,res) {
    res.sendFile(path.join(__dirname+'/dist/my-Shop/index.html'));
  });
+ 
 app.listen(port, () => console.log(`Server started on port ${port}`)); */
