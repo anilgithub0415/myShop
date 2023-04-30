@@ -4,7 +4,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 // Add MIME type configuration for JavaScript files
-app.use(express.static('../my-Shop', {
+app.use(express.static('dist/my-Shop', {
     setHeaders: (res, path, stat) => {
         if (path.endsWith('.js')) {
             res.set('Content-Type', 'application/javascript');
@@ -14,7 +14,7 @@ app.use(express.static('../my-Shop', {
 
 // Serve index.html file
 /* app.get('*', (req, res) => {
-    res.sendFile('my-Shop/index.html', { root: '.' });
+    res.sendFile('dist/my-Shop/index.html', { root: '.' });
 }); */
 app.get('/*', function(req,res) {
    res.sendFile(path.join(__dirname+'/my-Shop/index.html'));
