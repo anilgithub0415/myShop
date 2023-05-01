@@ -6,7 +6,9 @@ const app = express();
 
 // Serve static files from the dist directory
 //app.use(express.static(path.join(__dirname, 'dist', 'my-eshop')));
-app.use(express.static('./dist/my-eshop'));
+//app.use(express.static('./dist/my-eshop'));
+
+app.use(express.static(path.join(__dirname, 'my-eshop')));
 
 app.get('*.js', (req, res, next) => {
   req.url = req.url + '.gz';
@@ -107,7 +109,8 @@ app.get('*', (req, res) => {
  //res.sendFile('index.html', { root: __dirname + '/dist/my-eshop' });
 
  res.setHeader('Content-Type', 'text/html');
- res.sendFile(path.join(__dirname, 'my-eshop', 'index.html'));
+ //res.sendFile(path.join(__dirname, 'my-eshop', 'index.html'));
+  res.sendFile(path.join(__dirname, 'my-eshop/index.html'));
 });
 
 // Start the server on port 8081
