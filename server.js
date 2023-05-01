@@ -90,7 +90,7 @@ app.get('*', (req, res) => {
  // res.sendFile(path.join(__dirname, 'dist', 'my-eshop', 'index.html'));
  //res.sendFile(path.join('/dist', 'my-Shop', 'index.html'));
  //res.sendFile('index.html', { root: __dirname + '/dist/my-eshop' });
- res.sendFile(path.join(__dirname, 'my-eshop', 'index1.html'));
+ res.sendFile(path.join(__dirname, 'my-eshop', 'index.html'));
 });
 
 // Start the server on port 8081
