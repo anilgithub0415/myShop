@@ -8,6 +8,20 @@ const app = express();
 //app.use(express.static(path.join(__dirname, 'dist', 'my-eshop')));
 app.use(express.static('./dist/my-eshop'));
 
+app.get('*.js', (req, res, next) => {
+  req.url = req.url + '.gz';
+  res.set('Content-Encoding', 'gzip');
+  res.set('Content-Type', 'text/javascript');
+  next();
+});
+
+app.get('*.css', (req, res, next) => {
+  req.url = req.url + '.gz';
+  res.set('Content-Encoding', 'gzip');
+  res.set('Content-Type', 'text/css');
+  next();
+});
+
 //Option 1
 /**/ app.use(express.static(path.join(__dirname, 'dist', 'my-eshop')
 , {
