@@ -10,7 +10,8 @@ app.use(express.static(path.join(__dirname, 'dist', 'my-eshop')));
 // Serve index.html for all other routes
 app.get('*', (req, res) => {
  // res.sendFile(path.join(__dirname, 'dist', 'my-eshop', 'index.html'));
- res.sendFile(path.join('./dist', 'my-Shop', 'index.html'));
+// res.sendFile(path.join('./dist', 'my-Shop', 'index.html'));
+ res.sendFile('index.html', { root: __dirname + '/dist/my-shop' });
 });
 
 // Start the server on port 8081
