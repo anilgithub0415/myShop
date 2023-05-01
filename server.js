@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname, 'dist', 'my-eshop')));
             res.set('Content-Type', 'application/javascript');
         } 
         else if(path.endsWith('.html')) {
-            res.set('Content-Type', 'text/plain');
+            res.set('Content-Type', 'text/html');
         }
         else if(path.endsWith('.css')) {
             res.set('Content-Type', 'text/css');
